@@ -13,11 +13,11 @@ body {
 }
 
 .container {
-  background-color: #003b67;
   width: 100%;
   max-width: 400px;
   margin: 10px auto;
   padding: 45px;
+  background: linear-gradient(#003b67, #084f85);
 }
 
 .secondary-dark {
@@ -41,24 +41,29 @@ body {
 .currency-input {
   border: 1px solid lightgray;
   background-color: #003b67;
-  width: 100px;
+  width: 80px;
   font-weight: bold;
   font-size: 16px;
   color: white;
   float: left;
   display: inline-flex;
-  padding-left: 5px;
+  padding-left: 15px;
 }
 
 .ammount-input {
   border: none;
-  text-align: center;
+  text-align: left;
   background-color: #003b67;
   color: white;
   width: 100%;
   font-size: 16px;
   font-weight: bold;
   font-family: 'Montserrat';
+}
+.ammount-input:focus-visible {
+  outline: none !important;
+  border: none !important;
+  border-bottom-color: unset;
 }
 
 .box-fee {
@@ -105,7 +110,7 @@ body {
 }
 
 .credit {
-  width: calc(68% - 5px);
+  width: calc(68% - 8px);
 }
 
 .detail-fee {
