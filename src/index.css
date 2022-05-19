@@ -1,13 +1,117 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;    
+  width: 100%;
+  height: 100%;
+  background-color: #084f85;
+  color: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.wrapper-container {
+  background-color: #084f85;
 }
+
+.container {
+  background-color: #003b67;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 45px;
+}
+
+.secondary-dark {
+  background-color: #00355d;
+}
+
+.title {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  font-size: 16px;
+}
+
+.currency-input {
+  border: 1px solid lightgray;
+  background-color: #003b67;
+  width: 100px;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  float: left;
+  display: inline-flex;
+  padding-left: 5px;
+}
+
+.ammount-input {
+  border: none;
+  text-align: center;
+  background-color: #003b67;
+  color: white;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Montserrat';
+}
+
+.box-fee {
+  padding: 5px 20px;
+  font-weight: bold;
+}
+
+.fee-label {
+  font-size: 14px;
+  align-self: center;
+}
+
+.fee-ammount {
+  font-size: 30px;
+}
+
+
+.text-secondary {
+  color: #a8c0c4;
+}
+
+.title {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.button {
+  color: white;
+  padding: 8px 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+}
+
+.primary {
+  background-color: #17aa8d;
+}
+.secondary {
+  background-color: #0b548b;
+}
+
+.credit {
+  width: calc(68% - 5px);
+}
+
+.detail-fee {
+  font-size: 12px;
+  white-space: pre-line;
+  width: 32%;
+}
+
+

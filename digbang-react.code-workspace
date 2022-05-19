@@ -45,5 +45,5 @@
 	  "autoimport.filesToScan": "**/*.{js}",
 	  "editor.bracketPairColorization.enabled": true
 	}
-  }
+}
   
