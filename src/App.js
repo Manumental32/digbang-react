@@ -1,6 +1,21 @@
+import { useState } from 'react';
 import './App.css';
+import 'rc-slider/assets/index.css';
+import SliderCustom from './components/SliderCustom';
 
 function App() {
+  const AMMOUNT_INIT = 19500;
+  const AMMOUNT_MIN = 5000;
+  const AMMOUNT_MAX = 50000;
+  const marks = { 5000: '$ 5.000', 50000: '$ 50.000' };
+  const [ammount, setAmmount] = useState(AMMOUNT_INIT);
+
+  const FEE_INIT = 16;
+  const FEE_MIN = 3;
+  const FEE_MAX = 24;
+  const marksFee = { 3: '3', 24: '24' };
+  const [fee, setFee] = useState(FEE_INIT);
+
   return (
     <main className='wrapper-container'>
       <header>
@@ -9,26 +24,27 @@ function App() {
       <section className='container'>
         <header className='title'>Simulá tu crédito</header>
         <section>
-          <article>
-            <header className='row'>
-              <span className='label text-secondary'>MONTO TOTAL</span>
-              <span class='currency-input'>
-                $
-                <input
-                  type='number'
-                  id='ammount'
-                  name='ammount'
-                  className='ammount-input'
-                  value='19500'
-                  step='0.01'
-                  min='0'
-                />
-              </span>
-            </header>
-            <article>rc-slider</article>
-          </article>
+          <SliderCustom
+            id='ammount'
+            label={'MONTO TOTAL'}
+            value={ammount}
+            setValue={setAmmount}
+            min={AMMOUNT_MIN}
+            max={AMMOUNT_MAX}
+            marks={marks}
+            currency='$'
+          />
+          <SliderCustom
+            id='fee'
+            label={'PLAZO'}
+            value={fee}
+            setValue={setFee}
+            min={FEE_MIN}
+            max={FEE_MAX}
+            marks={marksFee}
+            currency=''
+          />
         </section>
-        {/* TODO: ADD PLAZO */}
         <section className='row secondary-dark box-fee'>
           <span className='fee-label'>CUOTA FIJA POR MES</span>
           <span className='fee-ammount'>$ 2,412.91</span>

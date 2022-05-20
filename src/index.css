@@ -50,7 +50,7 @@ body {
   padding-left: 15px;
 }
 
-.ammount-input {
+.number-input {
   border: none;
   text-align: left;
   background-color: #003b67;
@@ -60,7 +60,7 @@ body {
   font-weight: bold;
   font-family: 'Montserrat';
 }
-.ammount-input:focus-visible {
+.number-input:focus-visible {
   outline: none !important;
   border: none !important;
   border-bottom-color: unset;
@@ -119,4 +119,33 @@ body {
   width: 32%;
 }
 
+.box-slider{
+  height: 50px;
+  width: 90%;
+  margin: 15px auto;
+}
+
+.slider .rc-slider-handle {
+  border: solid 2px white;
+  opacity: 1;
+}
+
+.slider .rc-slider-track {
+  background-color: white;
+  height: 5px;
+  top: 5px;
+}
+
+.slider .rc-slider-dot-active{
+  border-color: white;
+}
+
+.slider .rc-slider-mark-text{
+  color: white;
+  width: 100px;
+}
+
+.slider .rc-slider-dot{
+  display: none;
+}
 
