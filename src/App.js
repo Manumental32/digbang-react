@@ -1,19 +1,12 @@
 import { useState } from 'react';
 import './App.css';
 import 'rc-slider/assets/index.css';
-import SliderCustom from './components/SliderCustom';
+import AmountSlider from './components/AmountSlider';
+import { AMOUNT_INIT, FEE_INIT } from './utils/Constants';
+import FeeSlider from './components/FeeSlider';
 
 function App() {
-  const AMMOUNT_INIT = 19500;
-  const AMMOUNT_MIN = 5000;
-  const AMMOUNT_MAX = 50000;
-  const marks = { 5000: '$ 5.000', 50000: '$ 50.000' };
-  const [ammount, setAmmount] = useState(AMMOUNT_INIT);
-
-  const FEE_INIT = 16;
-  const FEE_MIN = 3;
-  const FEE_MAX = 24;
-  const marksFee = { 3: '3', 24: '24' };
+  const [amount, setAmount] = useState(AMOUNT_INIT);
   const [fee, setFee] = useState(FEE_INIT);
 
   return (
@@ -24,30 +17,12 @@ function App() {
       <section className='container'>
         <header className='title'>Simulá tu crédito</header>
         <section>
-          <SliderCustom
-            id='ammount'
-            label={'MONTO TOTAL'}
-            value={ammount}
-            setValue={setAmmount}
-            min={AMMOUNT_MIN}
-            max={AMMOUNT_MAX}
-            marks={marks}
-            currency='$'
-          />
-          <SliderCustom
-            id='fee'
-            label={'PLAZO'}
-            value={fee}
-            setValue={setFee}
-            min={FEE_MIN}
-            max={FEE_MAX}
-            marks={marksFee}
-            currency=''
-          />
+          <AmountSlider amount={amount} setAmount={setAmount} />
+          <FeeSlider fee={fee} setFee={setFee} />
         </section>
         <section className='row secondary-dark box-fee'>
           <span className='fee-label'>CUOTA FIJA POR MES</span>
-          <span className='fee-ammount'>$ 2,412.91</span>
+          <span className='fee-amount'>$ 2,412.91</span>
         </section>
         <section className='row'>
           <button className='button primary credit'>OBTENÉ CRÉDITO</button>
