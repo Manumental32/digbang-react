@@ -1,13 +1,17 @@
 import { useState } from 'react';
 import './App.css';
 import 'rc-slider/assets/index.css';
-import AmountSlider from './components/AmountSlider';
-import { AMOUNT_INIT, FEE_INIT } from './utils/Constants';
-import FeeSlider from './components/FeeSlider';
+import AmountSlider, { AMOUNT_INIT } from './components/AmountSlider';
+import FeeSlider, { FEE_INIT } from './components/FeeSlider';
+import { CURRENCY } from './utils/Constants';
 
 function App() {
   const [amount, setAmount] = useState(AMOUNT_INIT);
   const [fee, setFee] = useState(FEE_INIT);
+
+  const getFeeByMount = () => {
+    return parseFloat(amount / fee).toFixed(2);
+  };
 
   return (
     <main className='wrapper-container'>
@@ -22,7 +26,7 @@ function App() {
         </section>
         <section className='row secondary-dark box-fee'>
           <span className='fee-label'>CUOTA FIJA POR MES</span>
-          <span className='fee-amount'>$ 2,412.91</span>
+          <span className='fee-amount'>{CURRENCY + ' ' + getFeeByMount()}</span>
         </section>
         <section className='row'>
           <button className='button primary credit'>OBTENÉ CRÉDITO</button>

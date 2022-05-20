@@ -11,11 +11,16 @@ export default function SliderCustom({
   marks,
   currency = '',
 }) {
+  const handleOnChange = ({ target }) => {
+    const { value } = target;
+    setValue(value);
+  };
+
   return (
     <article>
       <header className='row'>
         <span className='label text-secondary'>{label}</span>
-        <span class='currency-input'>
+        <span className='currency-input'>
           {currency}
           <input
             type='number'
@@ -25,6 +30,7 @@ export default function SliderCustom({
             value={value}
             // step='0.01'
             min={min}
+            onChange={handleOnChange}
           />
         </span>
       </header>
