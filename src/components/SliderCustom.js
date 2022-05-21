@@ -10,6 +10,7 @@ export default function SliderCustom({
   max,
   marks,
   currency = '',
+  step = '1',
 }) {
   const handleOnChange = ({ target }) => {
     const { value } = target;
@@ -27,10 +28,10 @@ export default function SliderCustom({
             id={id}
             name={id}
             className='number-input'
-            value={value}
-            // step='0.01'
+            value={value.toLocaleString()}
             min={min}
             onChange={handleOnChange}
+            step={step}
           />
         </span>
       </header>

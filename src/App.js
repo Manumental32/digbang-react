@@ -3,15 +3,13 @@ import './App.css';
 import 'rc-slider/assets/index.css';
 import AmountSlider, { AMOUNT_INIT } from './components/AmountSlider';
 import FeeSlider, { FEE_INIT } from './components/FeeSlider';
-import { CURRENCY } from './utils/Constants';
+import { formatPrice } from './utils/CommonFunctions';
 
 function App() {
   const [amount, setAmount] = useState(AMOUNT_INIT);
   const [fee, setFee] = useState(FEE_INIT);
-
-  const getFeeByMount = () => {
-    return parseFloat(amount / fee).toFixed(2);
-  };
+  const calculateFee = amount / fee;
+  const feeAmount = formatPrice(calculateFee);
 
   return (
     <main className='wrapper-container'>
@@ -26,7 +24,7 @@ function App() {
         </section>
         <section className='row secondary-dark box-fee'>
           <span className='fee-label'>CUOTA FIJA POR MES</span>
-          <span className='fee-amount'>{CURRENCY + ' ' + getFeeByMount()}</span>
+          <span className='fee-amount'>{feeAmount}</span>
         </section>
         <section className='row'>
           <button className='button primary credit'>OBTENÉ CRÉDITO</button>
