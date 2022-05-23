@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './App.css';
 import 'rc-slider/assets/index.css';
 import AmountSlider, { AMOUNT_INIT } from './components/AmountSlider';
 import FeeSlider, { FEE_INIT } from './components/FeeSlider';
@@ -14,7 +13,7 @@ function App() {
   return (
     <main className='wrapper-container'>
       <header>
-        <h1>Digbang-react</h1>
+        <h1 className='app-title'>Digbang-react</h1>
       </header>
       <section className='container'>
         <header className='title'>Simulá tu crédito</header>

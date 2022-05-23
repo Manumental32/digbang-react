@@ -32,7 +32,6 @@ export default function SliderCustom({
             min={min}
             onChange={handleOnChange}
             step={step}
-            lang='es-AR'
           />
         </span>
       </header>

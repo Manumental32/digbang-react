@@ -8,6 +8,12 @@ body {
   color: white;
 }
 
+.app-title {
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
+}
+
 .wrapper-container {
   background-color: #084f85;
 }
