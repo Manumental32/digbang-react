@@ -28,10 +28,11 @@ export default function SliderCustom({
             id={id}
             name={id}
             className='number-input'
-            value={value.toLocaleString()}
+            value={value}
             min={min}
             onChange={handleOnChange}
             step={step}
+            lang='es-AR'
           />
         </span>
       </header>
